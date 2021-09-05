@@ -1,0 +1,213 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> Login Page </title>
+    <script>  
+function validateform(){  
+var name=document.username.name.value;  
+var password=document.password.password.value;  
+  
+if (name==null || name==""){  
+  alert("Name can't be blank");  
+  return false;  
+}else if(password.length<6){  
+  alert("Password must be at least 6 characters long.");  
+  return false;  
+  }  
+} 
+</script> 
+<style> 
+Body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: white
+}
+button { 
+        
+    color: #DBAE58;
+    border: 3px solid #DBAE58;
+    font-family:'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    font-size: 17px;
+    background-color : white;
+    padding: 10px;
+    outline: none;
+    border-radius: 4px; 
+         } 
+    
+ form { 
+        border: 3px solid #DBAE58; 
+    } 
+ input[type=text], input[type=password] { 
+        width: 100%; 
+        margin: 8px 0;
+        padding: 12px 20px; 
+        display: inline-block; 
+        border: 2px solid #DBAE58; 
+        box-sizing: border-box;
+    }
+    input[type=password]{
+          width: 100%; 
+        margin: 8px 0;
+        padding: 12px 20px; 
+        display: inline-block; 
+        border: 2px solid #DBAE58; 
+        box-sizing: border-box;
+      animation-name: shake, glow-red;
+  animation-duration: 0.7s, 0.35s;
+  animation-iteration-count: 1, 2;
+}
+
+@keyframes shake {
+  0%, 20%, 40%, 60%, 80% {
+    transform: translateX(8px);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-8px);
+  }
+}
+
+@keyframes glow-red {
+  50% {
+    border-color: indianred;
+  }
+}
+    }
+    
+ button:hover { 
+     transition: all .5s ease;
+     color: black; 
+    } 
+  .cancelbtn { 
+        width: auto; 
+        padding: 10px 18px;
+        margin: 10px 5px;
+    } 
+       
+    
+   
+ .container { 
+        padding: 115px; 
+        background-image: url("images/pexels-artem-podrez-7232493.jpg");
+     } 
+ a:link {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+    }
+     a:visited {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color:#D2691E;
+  background-color: transparent;
+  text-decoration:none;
+}
+
+a:active {
+  color: #D2691E;
+  background-color: transparent;
+  text-decoration: none;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 1;
+  left: 1;
+  background-color: #DBAE58 ;
+  overflow-x: hidden;
+  transition: 0.9s;
+  padding-top: 60px;
+    
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+  transition: 0.4s;
+}
+
+.sidenav a:hover {
+  color: lightgoldenrodyellow;
+    background-color: transparent;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+    
+     
+}
+.sidenav .closebtn   :hover{
+    background-color: transparent;
+    }
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+
+    } 
+</style> 
+</head>  
+<body>  
+ 
+    <form>
+	<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+ <a  style="font-weight:bold" href="index.html">Home</a>
+			<a  style="font-weight:bold" href="index.html ">Featured</a>
+			<a  style="font-weight:bold" href="index.html#man">Graphics Card</a>
+			<a  style="font-weight:bold"href="index.html#motherboard">Motherboards</a>
+			<a style="font-weight:bold" href="About us.html">About Us</a>
+</div>
+
+
+ 
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "225px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+        <div class="container"> 
+           <form> 
+            <center> <h1> Login </h1> </center> 
+            <label>Username : </label> 
+            <input type="text" placeholder="Enter Username" name="username" required>
+            <label>Password : </label> 
+            <input type="password" placeholder="Enter Password" name="password" required>
+             
+            <input type="checkbox"  > Remember me <br>
+           <br>  <a href="index.html"> Forgot password? </a> <br> <button type="submit">Login</button> 
+
+            <button type="button" class="cancelbtn"> Cancel</button> <br>
+            <br>
+ <br>
+           
+    </form>
+        </div> 
+     
+</body>   
+</html>
